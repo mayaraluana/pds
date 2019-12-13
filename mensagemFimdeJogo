@@ -1,0 +1,13 @@
+private void fimJogo(String ganhador) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Fim de Jogo");
+        builder.setMessage(ganhador + " ganhou!");
+        builder.setPositiveButton("Finalizar", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface arg0, int arg1) {
+                JogoActivity.this.finish();
+                ludo.setJogando(false);
+            }
+        });
+
+        builder.create().show();
+    }
